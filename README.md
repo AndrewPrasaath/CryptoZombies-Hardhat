@@ -1,13 +1,14 @@
-# Sample Hardhat Project
+# CryptoZombies Hardhat Project
 
-This project demonstrates a basic Hardhat use case. It comes with a sample contract, a test for that contract, and a script that deploys that contract.
+This project demonstrates the solution of cryptozombies game using hardhat. It have all the contracts solution, test for that contracts, and script that deploys that contracts.
 
-Try running some of the following tasks:
+Try play around it:
 
 ```shell
-npx hardhat help
+git clone https://github.com/AndrewPrasaath/CryptoZombies-Hardhat.git
+npm install
+npx hardhat compile
+npx hardhat deploy
 npx hardhat test
-REPORT_GAS=true npx hardhat test
 npx hardhat node
-npx hardhat run scripts/deploy.js
 ```
