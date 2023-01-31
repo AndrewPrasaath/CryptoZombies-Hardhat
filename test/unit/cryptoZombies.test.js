@@ -29,5 +29,14 @@ describe("cryptoZombies", function () {
       expect(tx).to.emit(aliceZombie, "NewZombie");
       assert.equal(aliceZombieName[0], zombieNames[0]);
     });
+    it("should not allow two zombies", async () => {
+      const aliceZombie = cryptoZombiesContract.connect(alice);
+      await aliceZombie.createRandomZombie(zombieNames[0]);
+      await expect(aliceZombie.createRandomZombie(zombieNames[0])).to.be
+        .reverted;
+    });
+  });
+  describe("with the single-step transfer scenario", () => {
+    it("should transfer a zombie", async () => {});
   });
 });
